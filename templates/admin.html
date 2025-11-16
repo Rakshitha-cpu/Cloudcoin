@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel - CloudCoin</title>
+    <style>
+        body { font-family: Arial; padding: 20px; background: #f4f4f4; }
+        h2 { color: #333; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            background: white;
+        }
+        th {
+            background: #4CAF50;
+            color: white;
+        }
+        a { text-decoration: none; color: blue; }
+    </style>
+</head>
+<body>
+
+<h2>Admin Dashboard</h2>
+
+<h3>Users</h3>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Coins</th>
+    </tr>
+    {% for user in users %}
+    <tr>
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.coins }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<h3>Work Submissions</h3>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>User</th>
+        <th>File</th>
+        <th>Status</th>
+    </tr>
+    {% for work in works %}
+    <tr>
+        <td>{{ work.id }}</td>
+        <td>{{ work.user_id }}</td>
+        <td>{{ work.filename }}</td>
+        <td>{{ work.status }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
