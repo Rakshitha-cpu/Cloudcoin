@@ -1,6 +1,25 @@
-<h1>Login Page</h1>
-<form method="POST">
-    <input name="email" placeholder="Email">
-    <input name="password" placeholder="Password" type="password">
-    <button type="submit">Login</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login – CloudCoin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Welcome Back</h2>
+
+    <form method="POST">
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="password" name="password" placeholder="Password" required>
+
+        <button class="btn primary" type="submit">Login</button>
+    </form>
+
+    <p class="small-text">Don't have an account?  
+    <a href="{{ url_for('register') }}">Register here</a></p>
+</div>
+
+</body>
+</html>

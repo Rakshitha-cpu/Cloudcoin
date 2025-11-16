@@ -1,5 +1,21 @@
-<h1>User Dashboard</h1>
-<p>Welcome!</p>
-<a href="/upload">Upload Work</a>
-<a href="/logout">Logout</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Dashboard – CloudCoin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
 
+<div class="container">
+    <h1>Hello, {{ name }} 👋</h1>
+    <p class="subtitle">Your current coins: <strong>{{ coins }}</strong></p>
+
+    <div class="btn-group">
+        <a href="{{ url_for('upload') }}" class="btn primary">Upload Work</a>
+        <a href="{{ url_for('logout') }}" class="btn danger">Logout</a>
+    </div>
+</div>
+
+</body>
+</html>

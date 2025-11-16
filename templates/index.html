@@ -1,3 +1,21 @@
-<h1>Welcome to CloudCoin</h1>
-<a href="/login">Login</a>
-<a href="/register">Register</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CloudCoin – Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<div class="container center">
+    <h1>Welcome to CloudCoin</h1>
+    <p class="subtitle">Earn digital coins for real work you do in your community.</p>
+
+    <div class="btn-group">
+        <a href="{{ url_for('login') }}" class="btn primary">Login</a>
+        <a href="{{ url_for('register') }}" class="btn secondary">Register</a>
+    </div>
+</div>
+
+</body>
+</html>

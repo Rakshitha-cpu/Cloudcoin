@@ -1,0 +1,164 @@
+/* -------------------------
+   Global Reset & Base Style
+-------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #f4f8ff;
+    color: #333;
+    padding: 40px 20px;
+}
+
+/* -------------------------
+   Containers
+-------------------------- */
+.container {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+}
+
+.center {
+    margin-top: 100px;
+}
+
+.form-container {
+    max-width: 450px;
+    margin: 100px auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* -------------------------
+   Typography
+-------------------------- */
+h1, h2 {
+    margin-bottom: 15px;
+    color: #1d4ed8;
+}
+
+.subtitle {
+    color: #555;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+.small-text {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+/* -------------------------
+   Buttons
+-------------------------- */
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    margin: 8px;
+    border-radius: 8px;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.btn.primary {
+    background: #2563eb;
+    color: white;
+}
+
+.btn.primary:hover {
+    background: #1e4fc4;
+}
+
+.btn.secondary {
+    background: #e5e7eb;
+    color: #111;
+}
+
+.btn.secondary:hover {
+    background: #cdd0d4;
+}
+
+.btn.danger {
+    background: #ef4444;
+    color: white;
+}
+
+.btn.danger:hover {
+    background: #c53030;
+}
+
+.btn.full {
+    width: 100%;
+    text-align: center;
+}
+
+/* -------------------------
+   Forms
+-------------------------- */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border: 1px solid #d4d4d4;
+    border-radius: 8px;
+    background: #f8f9fb;
+}
+
+form button {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* -------------------------
+   Tables (Admin)
+-------------------------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table tr th {
+    background: #1d4ed8;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+table tr td {
+    padding: 12px;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+table tr:hover td {
+    background: #f1f5ff;
+}
+
+/* -------------------------
+   Responsive
+-------------------------- */
+@media (max-width: 600px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .form-container {
+        margin-top: 50px;
+        padding: 20px;
+    }
+}

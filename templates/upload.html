@@ -1,5 +1,23 @@
-<h1>Upload Work</h1>
-<form method="POST" enctype="multipart/form-data">
-    <input type="file" name="file">
-    <button type="submit">Upload</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Work – CloudCoin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Upload Work Proof</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+
+        <button class="btn primary" type="submit">Submit</button>
+    </form>
+
+    <a href="{{ url_for('dashboard') }}" class="btn secondary full">Back to Dashboard</a>
+</div>
+
+</body>
+</html>
